@@ -4,7 +4,7 @@
 "vim -O 分屏方式打开多个文件;sp水平分屏;vs垂直分屏;
 "行与TAB显示
 set cursorline
-set cursorcolumn
+"set cursorcolumn
 set tabstop=4
 set pastetoggle=<C-P> " Ctrl-P toggles paste mode
 "手动折叠
@@ -27,6 +27,11 @@ set shiftwidth=4
 set t_Co=256
 colorscheme molokai
 let g:molokai_original = 1
+"语法高亮
+filetype plugin indent on
+syntax on
+"解决golang语法不高亮问题
+au BufRead,BufNewFile *.go set filetype=go 
 "禁止临时文件
 set nobackup
 set noswapfile
