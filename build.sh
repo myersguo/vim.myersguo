@@ -1,5 +1,5 @@
 #!/bin/sh
 CWD=`pwd`
 
-ln -s $CWD/vimrc  $CWD/.vimrc
-ln -s $CWD/vim  $CWD/.vim
+ln -s $CWD/vimrc  ~/.vimrc
+ln -s $CWD/vim  ~/.vim
