@@ -46,6 +46,9 @@ set wildmenu wildmode=full
 set wildchar=<Tab> wildcharm=<C-Z>
 noremap <c-n> :b <c-z>
 
+" mac 退格键
+set backspace=2
+
 "窗口设置
 set splitbelow
 set splitright
@@ -91,7 +94,17 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'scrooloose/nerdtree'
 "Plugin 'Valloric/YouCompleteMe'
 Plugin 'majutsushi/tagbar'
-Plugin 'davidhalter/jedi-vim'
+"Plugin 'davidhalter/jedi-vim'
+Plugin 'AutoComplPop'
+"html plugin
+Plugin 'mattn/emmet-vim'
+Plugin 'hail2u/vim-css3-syntax'
+Plugin 'Raimondi/delimitMate'
+Plugin 'pangloss/vim-javascript'
+Plugin 'nathanaelkane/vim-indent-guides'
+Bundle 'vim-scripts/matchit.zip'
+" golang
+Plugin 'fatih/vim-go', { 'do': ':GoInstallBinaries', 'for': 'go' }
 call vundle#end()
 filetype plugin indent on
 
@@ -109,6 +122,11 @@ let g:NERDTreeWinPos="left"
 let g:NERDTreeWinSize=35
 " Close vim if the only window left is a NERDTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+
+" jedi 
+set omnifunc=jedi#completions
+
 
 " YouCompleteMe
 "let g:ycm_always_populate_location_list = 0
@@ -161,4 +179,6 @@ nnoremap <F8> :TagbarToggle<CR>
 let g:tagbar_autofocus=0
 let g:tagbar_right=1
 let g:tagbar_width=35
+
+
 
