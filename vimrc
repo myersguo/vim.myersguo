@@ -103,6 +103,10 @@ Plugin 'Raimondi/delimitMate'
 Plugin 'pangloss/vim-javascript'
 Plugin 'nathanaelkane/vim-indent-guides'
 Bundle 'vim-scripts/matchit.zip'
+Bundle 'ctrlpvim/ctrlp.vim'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+
 " golang
 Plugin 'fatih/vim-go', { 'do': ':GoInstallBinaries', 'for': 'go' }
 call vundle#end()
@@ -181,4 +185,10 @@ let g:tagbar_right=1
 let g:tagbar_width=35
 
 
+"ctrlp
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+" 设置过滤不进行查找的后缀名
+let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn|pyc)$'
 
+let g:airline_powerline_fonts = 1
