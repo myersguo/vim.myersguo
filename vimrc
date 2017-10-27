@@ -192,3 +192,7 @@ let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn|pyc)$'
 
 let g:airline_powerline_fonts = 1
+
+
+execute pathogen#infect()
+
