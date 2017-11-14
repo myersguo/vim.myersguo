@@ -106,6 +106,8 @@ Bundle 'vim-scripts/matchit.zip'
 Bundle 'ctrlpvim/ctrlp.vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
+Plugin 'Chiel92/vim-autoformat'
+
 
 " golang
 Plugin 'fatih/vim-go', { 'do': ':GoInstallBinaries', 'for': 'go' }
@@ -196,3 +198,8 @@ let g:airline_powerline_fonts = 1
 
 execute pathogen#infect()
 
+"autoformat
+"自动格式化代码，针对所有支持的文件
+au BufWrite * :Autoformat
+"自动格式化python代码
+"au BufWrite *.py :Autoformat
